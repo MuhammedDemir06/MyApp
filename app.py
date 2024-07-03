@@ -1,5 +1,5 @@
 import streamlit as st
-from github import Github
+#from github import Github
 import random
 
 st.set_page_config(page_title='Muhammed\'s Portfolio', layout="wide", page_icon='👨‍🔬')
@@ -66,35 +66,35 @@ def skill_tab():
 with st.spinner(text="Loading section..."):
     skill_tab()
 
-def get_github_project_links(username, token=None):
-    if token:
-        g = Github(token)
-    else:
-        g = Github()  # If you're using this script for personal use, you might not need a token
+#def get_github_project_links(username, token=None):
+ #   if token:
+       # g = Github(token)
+    #else:
+       # g = Github()  # If you're using this script for personal use, you might not need a token
 
-    user = g.get_user(username)
-    repos = user.get_repos()
+  #  user = g.get_user(username)
+   # repos = user.get_repos()
 
-    project_links = [repo.html_url for repo in repos]
+    #project_links = [repo.html_url for repo in repos]
 
-    return project_links
+    #return project_links
 
-def show_github_projects(links):
-    for link in links:
-        label = link.split("/")[-1]
+#def show_github_projects(links):
+    #for link in links:
+       # label = link.split("/")[-1]
         # Choose a random colorful emoji
-        emojis = ["🌟", "💡", "🔥", "💻", "👩‍💻"]
-        emoji = random.choice(emojis)
+       # emojis = ["🌟", "💡", "🔥", "💻", "👩‍💻"]
+       # emoji = random.choice(emojis)
         # Create shield badge markdown with colorful emoji
-        shield_badge = f'[![GitHub Project: {label}](https://img.shields.io/badge/GitHub-{label}-blue)]({link}) {emoji}'
+       # shield_badge = f'[![GitHub Project: {label}](https://img.shields.io/badge/GitHub-{label}-blue)]({link}) {emoji}'
         # Display shield badge
-        st.markdown(shield_badge, unsafe_allow_html=True)
+       # st.markdown(shield_badge, unsafe_allow_html=True)
 
 st.subheader("Projects")
 github_username = "MuhammedDemir06"
 if st.button("Fetch GitHub Repositories"):
     links = get_github_project_links(github_username)
-    show_github_projects(links)
+   # show_github_projects(links)
 
 st.subheader("Links")
 
