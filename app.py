@@ -90,10 +90,10 @@ with st.spinner(text="Loading section..."):
         # Display shield badge
        # st.markdown(shield_badge, unsafe_allow_html=True)
 
-st.subheader("Projects")
-github_username = "MuhammedDemir06"
-if st.button("Fetch GitHub Repositories"):
-    links = get_github_project_links(github_username)
+#st.subheader("Projects")
+#github_username = "MuhammedDemir06"
+#if st.button("Fetch GitHub Repositories"):
+    #links = get_github_project_links(github_username)
    # show_github_projects(links)
 
 st.subheader("Links")
